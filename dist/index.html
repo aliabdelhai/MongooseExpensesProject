@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expenses app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-wrapper">
+        <div class="left-side">
+            <div class="nav-link-wrapper">
+            </div>
+            <div class="nav-link-wrapper">
+                <div class='games'>all expenses</div>
+            </div>
+            <div class="nav-link-wrapper">
+                <div class='schedule'>about us</div>
+            </div>
+            <div class="nav-link-wrapper">
+                <div class='news'>explore</div>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="brand">
+                login
+            </div>
+            <div class="brand">
+                get all expenses
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+    <div class = 'expenses'></div>
+
+    <script id="store-template-expenses" type="text/x-handlebars-template">
+        {{#each expenses}}
+            <div class = 'expense'>
+                <div id='name'>{{name}}</div>
+                <div id='date'>{{date}}</div>    
+                <div id='amount'>amount: {{amount}}</div>
+                <div id='group'>Group: {{group}}</div>
+               
+            </div>
+        {{/each}}    
+    </script>
+    
+
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="ExpenseManager.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
